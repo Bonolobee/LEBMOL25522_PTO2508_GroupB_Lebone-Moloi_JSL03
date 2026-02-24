@@ -1,38 +1,50 @@
-# JSL03 Project Brief: Console-Based Task Manager
+# JSL03 Project: Console-Based Task Manager
 
 ## Important Prerequisite
-
-1. Before starting this challenge, make sure you have reviewed and corrected your JSL02 project using the provided solution. Your prompts for entering task details should be fully functional and include proper validation checks to ensure accurate user input.
-2. **Check the project user stories in your student dashboard**, make sure you understand what is required for each feature.
+1. **Foundation Check:** This project utilizes the UI and asset structure of the JSL02 solution to ensure a professional and consistent display.
+2. **User Stories:** Requirements for array manipulation and filtering have been verified against the student dashboard to ensure all functional goals are met.
 
 ## Overview
-
-This project involves creating a **simple task management system** where users can add **up to three new tasks** to an existing task array. Tasks are **stored as objects in an array**, each with a **unique incremental ID**. Users will enter task details via prompts, and the system will allow filtering to view only completed tasks. The project focuses on **array manipulation, user interaction via prompts and alerts, and console logging for task management**.
+This project involves the development of a structured task management system. The focus shifts from using simple variables to managing data within a **dynamic array of objects**. Each task is assigned a **unique incremental ID**, and the system enforces a strict limit on new entries. The project emphasizes **array methods**, **looping structures**, and **higher-order functions** like `.filter()`.
 
 ## Key Objectives
 
 ### Logic & User Interaction
+- **Structured Data:** Store all tasks as objects inside an array for organized data management.
+- **Task Limit:** Implement a loop that allows exactly **three new tasks** to be added to the board.
+- **Unique Identification:** Automatically calculate the ID for new tasks by incrementing the ID of the last item in the array.
+- **Validation:** Ensure all status inputs are validated (todo, doing, done) and normalized to lowercase.
+- **User Feedback:** Alert the user when the task limit is reached: _"There are enough tasks on your board, please check them in the console."_
+- **Data Filtering:** Implement a filter function to extract and display only tasks with the status `"done"`.
 
-- Store tasks as **objects inside an array** for structured data management.
-- Allow users to **add up to three new tasks** to the existing task list.
-- Ensure each new task has a **unique incremental ID** based on the last task in the array.
-- Prompt users to enter **task details (title, description, status)** and store them in an object.
-- Alert users when they reach the task limit with the message:
-  _"There are enough tasks on your board, please check them in the console."_
-  Implement a **filter function** to display only tasks with the status `"done"`.
-- Log **all tasks** in the console with a clear label for easy review.
-- Log **only completed tasks** (status: `"done"`) in the console under a "Completed Tasks" label for quick reference.
+## Project Structure
 
-## Code Quality & Maintainability
+├── index.html          # UI foundation (JSL02 Solution)
+├── style.css           # Global styles and Kanban layout
+├── scripts.js          # Logic: Array management, Loops, and Filtering
+├── assets/             # Branding (logo-light.svg, favicon.svg)
+└── README.md           # Project documentationFeatures Implemented
 
-- Use meaningful variable and function names to ensure readability and maintainability.
-- Follow consistent indentation and formatting to enhance code clarity.
-- Include comments explaining key logic and functionality to support future modifications.
+• ✅ Array-Based Storage - Centralized management of tasks using object literals.
 
-## Expected Outcome
+• ✅ Incremental ID Logic - Dynamic ID assignment ensuring unique identifiers for every entry.
 
-A **structured and limited task management system** that enables users to add, review, and filter tasks efficiently while ensuring **clean, well-documented, and maintainable code.**
+• ✅ Three-Task Entry Loop - Controlled input flow to manage task board density.
 
-**Console Log of all and completed tasks**
+• ✅ Enhanced Validation - Integrated logic to enforce correct status categories and formatting.
 
-![console log](./explainer-images/console%20log.png)
+• ✅ Console Reporting - Distinct logging for the full task list and a filtered "Completed Tasks" view.
+
+## How to Test
+
+1. Open [index.html](index.html) in your web browser.
+2. Follow the browser prompts to enter details for three additional tasks.
+3. Observe the mandatory alert message upon completion of the third task.
+4. Open the Browser Console (F12) to view:
+-The label "--- All Tasks ---" followed by the full array.
+-The label "--- Completed Tasks ---" followed by the filtered results.
+
+## Credits
+Base UI & Assets: JSL02 Official Solution Files.
+Project Brief: CodeSpace JSL03 Curriculum requirements.
+Developer: [Lebone Moloi]
